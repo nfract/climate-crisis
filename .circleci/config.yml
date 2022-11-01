@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  build:
+    machine:
+      enabled: true
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: |
+            sudo apt-get update
+            sudo apt-get -y install wget zip unzip
+      - run:
+          name: download godot headless (3.5.1)
+          command: |
+            wget -q https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_linux_headless.64.zip
+            unzip Godot_v3.5.1-stable_linux_headless.64.zip
+            mv Godot_v3.5.1-stable_linux_headless.64 godot
+            chmod +x godot
+      - run:
+          name: download godot export templates (3.5.1)
+          command: |
+            wget -q https://downloads.tuxfamily.org/godotengine/3.5.1/Godot_v3.5.1-stable_export_templates.tpz
+            mkdir -p ~/.local/share/godot/templates
+            uzip Godot_v3.5.1-stable_export_templates.tpz -d ~/.local/share/godot/templates
+            mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.5.1.stable
+      - run:
+          name: win64 build
+          command: |
+            mkdir -p win64
+            ./godot --export win64 project.godot "win64/Climate Crisis.exe"
