@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------------------
 # Author:  Brandon
-# Date:    11/07/22
 # Purpose: Determines when a seed has been clicked and contains properties
 #          relating to a seed.   
 #-----------------------------------------------------------------------------

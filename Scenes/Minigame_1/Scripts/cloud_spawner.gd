@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------------------
 # Author:  Brandon
-# Date:    11/07/22
 # Purpose: Contains the cool scrolling clouds background
 #-----------------------------------------------------------------------------
 extends Node
@@ -26,7 +25,7 @@ func generate_cloud(position: Vector2, velocity: Vector2, scale: Vector2):
 	cloud.velocity = velocity
 	cloud.instance.position = position;
 	cloud.instance.scale = scale;
-	cloud.instance.z_index = 0
+	cloud.instance.z_index = -1
 	
 	add_child(cloud.instance)
 	active_clouds.append(cloud)

@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Minigame_1/Scripts/seed_spawner.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Prefabs/background_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Sky.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Minigame_1/Scripts/player.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Score.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Minigame_1/Scripts/cloud_spawner.gd" type="Script" id=6]
+[ext_resource path="res://Assets/sun.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Moderate_Temp_Sprite.png" type="Texture" id=8]
 
 [node name="world" type="Node2D"]
 
@@ -19,11 +22,31 @@ limit_bottom = 10000
 editor_draw_limits = true
 script = ExtResource( 4 )
 
+[node name="ui" type="Node" parent="."]
+
+[node name="temperature" type="Sprite" parent="ui"]
+position = Vector2( -167, -421 )
+scale = Vector2( 1.068, 0.94 )
+texture = ExtResource( 8 )
+
+[node name="scoreboard" type="Sprite" parent="ui"]
+position = Vector2( -269, -398 )
+scale = Vector2( 3.67652, 2.01592 )
+texture = ExtResource( 5 )
+
 [node name="sky" type="Sprite" parent="."]
 position = Vector2( -9, -224 )
 scale = Vector2( 3.67652, 2.01592 )
 z_index = -2
 texture = ExtResource( 3 )
+
+[node name="cloud_spawner" type="Node" parent="sky"]
+script = ExtResource( 6 )
+
+[node name="sun" type="Sprite" parent="sky"]
+position = Vector2( 83.7748, -96.2339 )
+scale = Vector2( 0.29, 0.37 )
+texture = ExtResource( 7 )
 
 [node name="background_1" parent="." instance=ExtResource( 2 )]
 position = Vector2( -35, -34 )
@@ -50,9 +73,6 @@ offset = Vector2( -17, -6 )
 [node name="background_7" parent="background_1" instance=ExtResource( 2 )]
 position = Vector2( 402, -7 )
 offset = Vector2( -17, -6 )
-
-[node name="cloud_spawner" type="Node" parent="."]
-script = ExtResource( 6 )
 
 [node name="seed_spawner" type="Node" parent="."]
 script = ExtResource( 1 )

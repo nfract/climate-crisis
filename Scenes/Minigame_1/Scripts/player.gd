@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------------------
 # Author:  Brandon
-# Date:    11/07/22
 # Purpose: Contains player related functions and properties
 #-----------------------------------------------------------------------------
 extends Camera2D

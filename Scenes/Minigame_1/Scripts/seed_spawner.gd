@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------------------
 # Author:  Brandon
-# Date:    11/07/22
 # Purpose: Generate seeds at a certain initial height then save those seeds into
 #		   an array. Then perform any processing on those seeds
 #-----------------------------------------------------------------------------
