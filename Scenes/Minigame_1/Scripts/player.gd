@@ -27,5 +27,7 @@ func _process(delta):
 # return true  = delete seed
 # return false = keep seed
 func on_seed_clicked(id, instance: Node2D):
-	print("Hello world" + str(id))
-	return false
+	#print("Hello world" + str(id))
+	Global.score += 1
+	print(Global.score)
+	return true

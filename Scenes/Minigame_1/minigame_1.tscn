@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Minigame_1/Scripts/seed_spawner.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Prefabs/background_1.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Minigame_1/Scripts/cloud_spawner.gd" type="Script" id=6]
 [ext_resource path="res://Assets/sun.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Moderate_Temp_Sprite.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Minigame_1/Score.gd" type="Script" id=9]
 
 [node name="world" type="Node2D"]
 
@@ -76,3 +77,8 @@ offset = Vector2( -17, -6 )
 
 [node name="seed_spawner" type="Node" parent="."]
 script = ExtResource( 1 )
+
+[node name="Score" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+script = ExtResource( 9 )
