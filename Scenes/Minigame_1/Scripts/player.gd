@@ -4,10 +4,19 @@
 #-----------------------------------------------------------------------------
 extends Camera2D
 
+var timer = 0
+
 func _ready():
 	pass 
 
 func _process(delta):
+	
+	# Example code of a timer that will run every 1 second
+	timer += delta
+	if timer * 1000 >= 1 * 1000:
+		print("1 second has passed")
+		timer = 0
+	
 	pass
 
 # Called whenever the player clicks a seed
