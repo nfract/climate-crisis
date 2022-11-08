@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/Minigame_1/Scripts/seed_spawner.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Prefabs/background_1.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/sun.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Moderate_Temp_Sprite.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/Minigame_1/Scripts/Score.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Minigame_1/Scripts/temperature.gd" type="Script" id=10]
 
 [node name="world" type="Node2D"]
 
@@ -38,6 +39,7 @@ script = ExtResource( 4 )
 position = Vector2( -167, -421 )
 scale = Vector2( 1.068, 0.94 )
 texture = ExtResource( 8 )
+script = ExtResource( 10 )
 
 [node name="scoreboard" type="Sprite" parent="ui"]
 position = Vector2( -287, -402 )
