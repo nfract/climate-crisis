@@ -6,6 +6,8 @@ extends Sprite
 # var b = "text"
 var coolTimer = Timer.new()
 var hotTimer = Timer.new()
+var rng = RandomNumberGenerator.new()
+var time
 
 func _set_hot_timer():
 	#hotTimer = Timer.new()
@@ -15,7 +17,7 @@ func _set_hot_timer():
 
 func _set_cool_timer():
 	#coolTimer = Timer.new()
-	coolTimer.set_wait_time(5) #wait for 5 seconds
+	coolTimer.set_wait_time(time) #wait for 5 seconds
 	coolTimer.connect("timeout",self,"_change_to_hot") 
 	add_child(coolTimer) 
 
@@ -33,6 +35,9 @@ func _change_to_cool():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	rng.randomize()
+	time = rng.randi_range(3,10)
+	print ("Time is: ", time)
 	_change_to_cool() 
 	pass # Replace with function body.
 	
