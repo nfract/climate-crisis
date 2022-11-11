@@ -1,0 +1,86 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/SourceSansPro-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Light Blue Background.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/Kenney High.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Game 1 Fact and Instruction.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 29
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 29
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="game 1 fact and instruction" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 516, 305 )
+scale = Vector2( 3.97231, 2.14278 )
+texture = ExtResource( 3 )
+
+[node name="fact" type="Label" parent="."]
+margin_left = 23.0
+margin_top = 106.0
+margin_right = 1522.0
+margin_bottom = 367.0
+rect_scale = Vector2( 0.968391, 1.27007 )
+custom_fonts/font = SubResource( 1 )
+text = "Climate Change Fact:
+Periods of heat can start germination in seeds early and kill them in the process.
+The goal of this game is to take the role as a farmer and make sure the seeds survive 
+the winter!"
+
+[node name="title" type="Label" parent="."]
+margin_left = 233.0
+margin_top = 19.0
+margin_right = 348.0
+margin_bottom = 42.0
+rect_scale = Vector2( 5.56799, 3.57565 )
+custom_fonts/font = SubResource( 2 )
+text = "Seed click"
+
+[node name="instructions" type="Label" parent="."]
+margin_left = 21.0
+margin_top = 344.0
+margin_right = 984.0
+margin_bottom = 461.0
+custom_fonts/font = SubResource( 3 )
+text = "Instructions:
+Your job is to click on the seed when the temperature rises so they don't die. 
+Seeds will respawn after the heat wave. Each seed picked up."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 407.0
+margin_top = 485.0
+margin_right = 607.0
+margin_bottom = 579.0
+
+[node name="start" type="Button" parent="VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 4 )
+text = "Start"
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]

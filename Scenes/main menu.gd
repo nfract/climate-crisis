@@ -7,4 +7,4 @@ func _ready():
 
 
 func _on_game_1_pressed():
-	get_tree().change_scene("res://Scenes/Minigame_1/minigame_1.tscn")
+	get_tree().change_scene("res://Game 1 Fact and Instruction.tscn")
