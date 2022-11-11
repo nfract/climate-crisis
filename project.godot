@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="climate-crisis"
-run/main_scene="res://Scenes/Minigame_1/minigame_1.tscn"
+run/main_scene="res://Scenes/main menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
