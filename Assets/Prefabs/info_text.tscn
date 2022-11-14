@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="node2d" type="Node2D"]
+
+[node name="text" type="Label" parent="."]
+margin_top = -15.0
+margin_right = 40.0
+margin_bottom = -1.0
+text = "Temperature is currently moderate!"

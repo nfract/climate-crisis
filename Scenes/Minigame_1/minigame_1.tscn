@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Minigame_1/Scripts/seed_spawner.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Prefabs/background_1.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/Moderate_Temp_Sprite.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/Minigame_1/Scripts/Score.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/Minigame_1/Scripts/temperature.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/Minigame_1/Scripts/text_spawner.gd" type="Script" id=11]
 
 [node name="world" type="Node2D"]
 
@@ -21,6 +22,9 @@ margin_bottom = -396.0
 rect_scale = Vector2( 2.64, 2.27542 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 script = ExtResource( 9 )
+
+[node name="text_spawner" type="Node" parent="."]
+script = ExtResource( 11 )
 
 [node name="player" type="Camera2D" parent="."]
 position = Vector2( 0, -241 )

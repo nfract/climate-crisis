@@ -1,8 +1,3 @@
-# ----------------------------------------------------------------------------
-# Author:  Brandon
-# Purpose: Generate seeds at a certain initial height then save those seeds into
-#		   an array. Then perform any processing on those seeds
-#-----------------------------------------------------------------------------
 extends Node
 
 var seed_prefab = preload("res://Assets/Prefabs/seed.tscn")
@@ -44,7 +39,7 @@ func _process(delta):
 		
 		# Call the player callback function "on_seed_clicked(..)"
 		if collision_node.clicked == true:
-			if (_player.on_seed_clicked(seeds.find(i), i)):
+			if (_player.on_seed_clicked(seeds.find(i), i, seeds.size())):
 				i.queue_free()
 				seeds.erase(i)
 			
