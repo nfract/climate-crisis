@@ -1,7 +1,3 @@
-# ----------------------------------------------------------------------------
-# Author:  Brandon
-# Purpose: Contains the cool scrolling clouds background
-#-----------------------------------------------------------------------------
 extends Node
 
 export var cloud_count            = 40;
