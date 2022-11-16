@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Cloud",
 "language": "GDScript",
 "path": "res://Scenes/Minigame_1/Scripts/cloud.gd"
+}, {
+"base": "Reference",
+"class": "Text",
+"language": "GDScript",
+"path": "res://Scenes/Minigame_1/Scripts/text.gd"
 } ]
 _global_script_class_icons={
-"Cloud": ""
+"Cloud": "",
+"Text": ""
 }
 
 [application]

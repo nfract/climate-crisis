@@ -49,7 +49,7 @@ custom_fonts/font = SubResource( 1 )
 text = "Climate Change Fact:
 Periods of heat can start germination in seeds early and kill them in the process.
 The goal of this game is to take the role as a farmer and make sure the seeds survive 
-the winter!"
+the heatwave!"
 
 [node name="title" type="Label" parent="."]
 margin_left = 233.0
