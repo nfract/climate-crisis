@@ -68,7 +68,7 @@ margin_bottom = 461.0
 custom_fonts/font = SubResource( 3 )
 text = "Instructions:
 Your job is to click on the seed when the temperature rises so they don't die. 
-Seeds will respawn after the heat wave. Each seed picked up."
+Seeds will respawn after the heat wave. Each seed picked up is 1 point."
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 407.0
