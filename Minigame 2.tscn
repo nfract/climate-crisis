@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/earth.png" type="Texture" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 508, 303 )
+rotation = 3.13745
+scale = Vector2( 5.28767, -5.19551 )
+texture = ExtResource( 1 )
+flip_h = true

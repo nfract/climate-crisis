@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scenes/main menu.gd" type="Script" id=1]
+[ext_resource path="res://main menu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Kenney High.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonts/Kenney Pixel Square.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Assets/Main_Menu.png" type="Texture" id=4]
@@ -83,3 +83,4 @@ flat = true
 icon_align = 1
 
 [connection signal="pressed" from="VBoxContainer/game 1" to="." method="_on_game_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/game 2" to="." method="_on_game_2_pressed"]
