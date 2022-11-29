@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Fonts/SourceSansPro-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/SourceSansPro-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/Light Blue Background.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/Kenney High.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Game 1 Fact and Instruction.gd" type="Script" id=5]
@@ -10,18 +10,18 @@
 size = 29
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 29
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 100
