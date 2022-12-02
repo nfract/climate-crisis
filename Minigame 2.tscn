@@ -1,6 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://Fonts/Kenney High.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/earth 2.png" type="Texture" id=2]
+[ext_resource path="res://Minigame 2.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -9,8 +20,34 @@ margin_left = 49.0
 margin_top = -11.0
 margin_right = 49.0
 margin_bottom = -11.0
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 464.125, 321 )
 scale = Vector2( 1.47179, 1.28725 )
 texture = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = -24.0
+margin_top = 30.0
+margin_right = 38.0
+margin_bottom = 70.0
+rect_scale = Vector2( 2.12, 1.44 )
+
+[node name="main menu" type="Button" parent="VBoxContainer"]
+margin_right = 62.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 1 )
+text = "Main Menu"
+flat = true
+
+[node name="next" type="Button" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 62.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 2 )
+text = "Next"
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/main menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/next" to="." method="_on_next_pressed"]
