@@ -49,22 +49,22 @@ custom_fonts/font = SubResource( 1 )
 text = "Clean the Earth"
 
 [node name="fact" type="Label" parent="."]
-margin_left = 12.0
-margin_top = 89.0
-margin_right = 886.0
-margin_bottom = 241.0
+margin_left = 7.0
+margin_top = 113.0
+margin_right = 881.0
+margin_bottom = 265.0
 rect_scale = Vector2( 1.56699, 1.85567 )
 custom_fonts/font = SubResource( 2 )
 text = "Climate Change Fact: Environments are getting damaged because of 
 climate change. However we can take action to prevent more 
-destruction and negative effects. 
+destruction and negative effects by humans. 
 "
 
 [node name="Label" type="Label" parent="."]
-margin_left = 8.0
-margin_top = 283.0
-margin_right = 545.0
-margin_bottom = 340.0
+margin_left = 11.0
+margin_top = 314.0
+margin_right = 548.0
+margin_bottom = 371.0
 rect_scale = Vector2( 1.76443, 1.69669 )
 custom_fonts/font = SubResource( 3 )
 text = "Instructions: Click the options on the screen until the entire
