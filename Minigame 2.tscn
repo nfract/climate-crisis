@@ -1,8 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Fonts/Kenney High.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/earth 2.png" type="Texture" id=2]
 [ext_resource path="res://Minigame 2.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Dead_Coral_1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Coral_1.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Minigame_2/Scripts/Coral.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Minigame_2/Scripts/Tree.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Tree_Stump.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Tree1.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 outline_size = 1
@@ -49,5 +55,99 @@ custom_fonts/font = SubResource( 2 )
 text = "Next"
 flat = true
 
+[node name="CoralButton" type="TextureButton" parent="."]
+anchor_left = 0.337
+anchor_top = 0.54
+anchor_right = 0.455
+anchor_bottom = 0.598
+margin_left = 48.912
+margin_top = 6.10352e-05
+margin_right = 728.08
+margin_bottom = 765.2
+rect_scale = Vector2( 0.05, 0.05 )
+toggle_mode = true
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+
+[node name="Coral1" type="Sprite" parent="CoralButton"]
+position = Vector2( 940, 119.999 )
+texture = ExtResource( 4 )
+script = ExtResource( 6 )
+
+[node name="Coral2" type="Sprite" parent="CoralButton"]
+position = Vector2( -779.999, 79.9995 )
+texture = ExtResource( 4 )
+script = ExtResource( 6 )
+
+[node name="Coral3" type="Sprite" parent="CoralButton"]
+position = Vector2( -180, 380 )
+texture = ExtResource( 4 )
+script = ExtResource( 6 )
+
+[node name="Coral4" type="Sprite" parent="CoralButton"]
+position = Vector2( 1200, 459.999 )
+texture = ExtResource( 4 )
+script = ExtResource( 6 )
+
+[node name="WoodsButton" type="TextureButton" parent="."]
+anchor_left = 0.391
+anchor_top = 0.682
+anchor_right = 0.427
+anchor_bottom = 0.748
+margin_left = -12.3841
+margin_top = -6.20001
+margin_right = 750.752
+margin_bottom = 754.2
+rect_scale = Vector2( 0.07, 0.07 )
+toggle_mode = true
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+
+[node name="Tree1" type="Sprite" parent="WoodsButton"]
+position = Vector2( 885.715, 471.429 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+script = ExtResource( 7 )
+
+[node name="Tree2" type="Sprite" parent="WoodsButton"]
+position = Vector2( 0, 657.143 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+script = ExtResource( 7 )
+
+[node name="Tree3" type="Sprite" parent="WoodsButton"]
+position = Vector2( 385.714, 1100 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+script = ExtResource( 7 )
+
+[node name="Tree4" type="Sprite" parent="WoodsButton"]
+position = Vector2( 1042.86, 1000 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+script = ExtResource( 7 )
+
+[node name="Tree5" type="Sprite" parent="WoodsButton"]
+position = Vector2( 771.428, 1371.43 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+script = ExtResource( 7 )
+
+[node name="Tree6" type="Sprite" parent="WoodsButton"]
+position = Vector2( 28.5723, 1300 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+script = ExtResource( 7 )
+
 [connection signal="pressed" from="VBoxContainer/main menu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="CoralButton" to="CoralButton/Coral1" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CoralButton" to="CoralButton/Coral2" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CoralButton" to="CoralButton/Coral3" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CoralButton" to="CoralButton/Coral4" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree1" method="_on_WoodsButton_pressed"]
+[connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree2" method="_on_WoodsButton_pressed"]
+[connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree3" method="_on_WoodsButton_pressed"]
+[connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree4" method="_on_WoodsButton_pressed"]
+[connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree5" method="_on_WoodsButton_pressed"]
+[connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree6" method="_on_WoodsButton_pressed"]
