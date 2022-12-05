@@ -1,4 +1,4 @@
-extends Control
+extends Sprite
 
 
 # Declare member variables here. Examples:
@@ -8,6 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	texture = load("res://Assets/Tree_Stump.png")
 	pass # Replace with function body.
 
 
@@ -16,13 +17,6 @@ func _ready():
 #	pass
 
 
-func _on_main_menu_pressed():
-	get_tree().change_scene("res://main menu.tscn")
-
-
-func _on_next_pressed():
-	get_tree().change_scene("res://End Message.tscn")
-
-
-func _on_TextureButton_pressed():
+func _on_WoodsButton_pressed():
+	texture = load("res://Assets/Tree1.png")
 	pass # Replace with function body.
