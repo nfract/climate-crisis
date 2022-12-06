@@ -12,6 +12,7 @@
 [ext_resource path="res://Scenes/Minigame_2/Scripts/TrashPile.gd" type="Script" id=10]
 [ext_resource path="res://Assets/Trash.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Oil_Pump.png" type="Texture" id=12]
+[ext_resource path="res://Fonts/Kenney Pixel Square.ttf" type="DynamicFontData" id=13]
 [ext_resource path="res://Scenes/Minigame_2/Scripts/MeltingIce.gd" type="Script" id=13]
 [ext_resource path="res://Scenes/Minigame_2/Scripts/Oilrig.gd" type="Script" id=14]
 [ext_resource path="res://Assets/iceberg melting.png" type="Texture" id=15]
@@ -24,6 +25,12 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=2]
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 13 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -189,6 +196,18 @@ position = Vector2( 28.5723, 1300 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 9 )
 script = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -536.0
+margin_top = 209.0
+margin_right = -362.0
+margin_bottom = 430.0
+custom_fonts/font = SubResource( 3 )
+text = "Click on each item to help clean the earth!"
+align = 1
+autowrap = true
 
 [node name="IceButton" type="TextureButton" parent="."]
 anchor_left = -0.045
