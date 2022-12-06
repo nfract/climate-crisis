@@ -9,5 +9,6 @@ func _on_OilrigButton1_pressed():
 	
 	# Used to ensure it is properly position to the original size of the oil rig and position
 	scale = Vector2(0.1, 0.1)
-	position = Vector2(position.x, position.y - 50)
+	position = Vector2(35, 10)
+
 	pass
