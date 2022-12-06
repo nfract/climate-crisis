@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Fonts/Kenney High.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/earth 2.png" type="Texture" id=2]
@@ -9,6 +9,11 @@
 [ext_resource path="res://Scenes/Minigame_2/Scripts/Tree.gd" type="Script" id=7]
 [ext_resource path="res://Assets/Tree_Stump.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Tree1.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Minigame_2/Scripts/TrashPile.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Trash.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Oil_Pump.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Nuclear_Reactor.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Minigame_2/Scripts/Oilrig.gd" type="Script" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 outline_size = 1
@@ -112,7 +117,7 @@ script = ExtResource( 7 )
 [node name="Tree2" type="Sprite" parent="WoodsButton"]
 position = Vector2( 0, 657.143 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 9 )
+texture = ExtResource( 13 )
 script = ExtResource( 7 )
 
 [node name="Tree3" type="Sprite" parent="WoodsButton"]
@@ -139,6 +144,57 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 9 )
 script = ExtResource( 7 )
 
+[node name="TrashButton3" type="TextureButton" parent="WoodsButton"]
+margin_left = 4585.71
+margin_top = 242.859
+margin_right = 5385.71
+margin_bottom = 614.859
+rect_pivot_offset = Vector2( -8157.14, -99.9983 )
+
+[node name="Trash1" type="Sprite" parent="WoodsButton/TrashButton3"]
+position = Vector2( 408.5, 318 )
+scale = Vector2( 1.02125, 1.0275 )
+texture = ExtResource( 11 )
+script = ExtResource( 10 )
+
+[node name="TrashButton2" type="TextureButton" parent="WoodsButton"]
+margin_left = -1600.0
+margin_top = -2428.57
+margin_right = -800.0
+margin_bottom = -2056.57
+rect_pivot_offset = Vector2( -8157.14, -99.9983 )
+
+[node name="Trash1" type="Sprite" parent="WoodsButton/TrashButton2"]
+position = Vector2( 408.5, 318 )
+scale = Vector2( 1.02125, 1.0275 )
+texture = ExtResource( 11 )
+script = ExtResource( 10 )
+
+[node name="TrashButton1" type="TextureButton" parent="WoodsButton"]
+margin_left = 1714.29
+margin_top = -3971.43
+margin_right = 2514.29
+margin_bottom = -3599.43
+rect_pivot_offset = Vector2( -8157.14, -99.9983 )
+
+[node name="Trash1" type="Sprite" parent="WoodsButton/TrashButton1"]
+position = Vector2( 408.5, 318 )
+scale = Vector2( 1.02125, 1.0275 )
+texture = ExtResource( 11 )
+script = ExtResource( 10 )
+
+[node name="OilrigButton1" type="TextureButton" parent="WoodsButton"]
+margin_left = -514.285
+margin_top = -4557.14
+margin_right = -453.285
+margin_bottom = -4501.14
+
+[node name="Oilrig1" type="Sprite" parent="WoodsButton/OilrigButton1"]
+position = Vector2( 40, 67 )
+scale = Vector2( 1.66, 1.66 )
+texture = ExtResource( 12 )
+script = ExtResource( 14 )
+
 [connection signal="pressed" from="VBoxContainer/main menu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="CoralButton" to="CoralButton/Coral1" method="_on_TextureButton_pressed"]
@@ -151,3 +207,7 @@ script = ExtResource( 7 )
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree4" method="_on_WoodsButton_pressed"]
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree5" method="_on_WoodsButton_pressed"]
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree6" method="_on_WoodsButton_pressed"]
+[connection signal="pressed" from="WoodsButton/TrashButton3" to="WoodsButton/TrashButton3/Trash1" method="_on_TrashButton1_pressed"]
+[connection signal="pressed" from="WoodsButton/TrashButton2" to="WoodsButton/TrashButton2/Trash1" method="_on_TrashButton1_pressed"]
+[connection signal="pressed" from="WoodsButton/TrashButton1" to="WoodsButton/TrashButton1/Trash1" method="_on_TrashButton1_pressed"]
+[connection signal="pressed" from="WoodsButton/OilrigButton1" to="WoodsButton/OilrigButton1/Oilrig1" method="_on_OilrigButton1_pressed"]
