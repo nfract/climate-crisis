@@ -13,7 +13,9 @@
 [ext_resource path="res://Assets/Trash.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Oil_Pump.png" type="Texture" id=12]
 [ext_resource path="res://Fonts/Kenney Pixel Square.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Scenes/Minigame_2/Scripts/MeltingIce.gd" type="Script" id=13]
 [ext_resource path="res://Scenes/Minigame_2/Scripts/Oilrig.gd" type="Script" id=14]
+[ext_resource path="res://Assets/iceberg melting.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 outline_size = 1
@@ -207,6 +209,20 @@ text = "Click on each item to help clean the earth!"
 align = 1
 autowrap = true
 
+[node name="IceButton" type="TextureButton" parent="."]
+anchor_left = -0.045
+anchor_right = -0.045
+margin_left = 639.08
+margin_top = 509.0
+margin_right = 731.08
+margin_bottom = 593.0
+
+[node name="MeltingIce" type="Sprite" parent="IceButton"]
+position = Vector2( 40, 48.3125 )
+scale = Vector2( 0.4875, 0.463125 )
+texture = ExtResource( 15 )
+script = ExtResource( 13 )
+
 [connection signal="pressed" from="TrashButton3" to="TrashButton3/Trash1" method="_on_TrashButton1_pressed"]
 [connection signal="pressed" from="TrashButton2" to="TrashButton2/Trash1" method="_on_TrashButton1_pressed"]
 [connection signal="pressed" from="TrashButton1" to="TrashButton1/Trash1" method="_on_TrashButton1_pressed"]
@@ -222,3 +238,4 @@ autowrap = true
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree4" method="_on_WoodsButton_pressed"]
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree5" method="_on_WoodsButton_pressed"]
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree6" method="_on_WoodsButton_pressed"]
+[connection signal="pressed" from="IceButton" to="IceButton/MeltingIce" method="_on_IceButton_pressed"]
