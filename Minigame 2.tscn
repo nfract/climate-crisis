@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Fonts/Kenney High.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/earth 2.png" type="Texture" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://Scenes/Minigame_2/Scripts/TrashPile.gd" type="Script" id=10]
 [ext_resource path="res://Assets/Trash.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Oil_Pump.png" type="Texture" id=12]
-[ext_resource path="res://Assets/Nuclear_Reactor.png" type="Texture" id=13]
 [ext_resource path="res://Scenes/Minigame_2/Scripts/Oilrig.gd" type="Script" id=14]
 
 [sub_resource type="DynamicFont" id=1]
@@ -34,9 +33,60 @@ margin_bottom = -11.0
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 464.125, 321 )
+position = Vector2( 467, 324 )
 scale = Vector2( 1.47179, 1.28725 )
 texture = ExtResource( 2 )
+
+[node name="TrashButton3" type="TextureButton" parent="."]
+margin_left = 616.0
+margin_top = 222.0
+margin_right = 687.0
+margin_bottom = 289.0
+rect_pivot_offset = Vector2( -8157.14, -99.9983 )
+
+[node name="Trash1" type="Sprite" parent="TrashButton3"]
+position = Vector2( 44, 34 )
+scale = Vector2( 0.0909375, 0.0914941 )
+texture = ExtResource( 11 )
+script = ExtResource( 10 )
+
+[node name="TrashButton2" type="TextureButton" parent="."]
+margin_left = 220.0
+margin_top = 413.0
+margin_right = 272.0
+margin_bottom = 447.0
+rect_pivot_offset = Vector2( -8157.14, -99.9983 )
+
+[node name="Trash1" type="Sprite" parent="TrashButton2"]
+position = Vector2( 27, 23 )
+scale = Vector2( 0.0650002, 0.065398 )
+texture = ExtResource( 11 )
+script = ExtResource( 10 )
+
+[node name="TrashButton1" type="TextureButton" parent="."]
+margin_left = 705.0
+margin_top = 414.0
+margin_right = 790.0
+margin_bottom = 491.0
+rect_pivot_offset = Vector2( -8157.14, -99.9983 )
+
+[node name="Trash1" type="Sprite" parent="TrashButton1"]
+position = Vector2( 42, 43 )
+scale = Vector2( 0.0846875, 0.0852058 )
+texture = ExtResource( 11 )
+script = ExtResource( 10 )
+
+[node name="OilrigButton1" type="TextureButton" parent="."]
+margin_left = 308.0
+margin_top = 164.0
+margin_right = 363.0
+margin_bottom = 215.0
+
+[node name="Oilrig1" type="Sprite" parent="OilrigButton1"]
+position = Vector2( 35, 53 )
+scale = Vector2( 1.87107, 1.65211 )
+texture = ExtResource( 12 )
+script = ExtResource( 14 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = -24.0
@@ -114,12 +164,6 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 9 )
 script = ExtResource( 7 )
 
-[node name="Tree2" type="Sprite" parent="WoodsButton"]
-position = Vector2( 0, 657.143 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
-script = ExtResource( 7 )
-
 [node name="Tree3" type="Sprite" parent="WoodsButton"]
 position = Vector2( 385.714, 1100 )
 scale = Vector2( 2, 2 )
@@ -144,57 +188,10 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 9 )
 script = ExtResource( 7 )
 
-[node name="TrashButton3" type="TextureButton" parent="WoodsButton"]
-margin_left = 4585.71
-margin_top = 242.859
-margin_right = 5385.71
-margin_bottom = 614.859
-rect_pivot_offset = Vector2( -8157.14, -99.9983 )
-
-[node name="Trash1" type="Sprite" parent="WoodsButton/TrashButton3"]
-position = Vector2( 408.5, 318 )
-scale = Vector2( 1.02125, 1.0275 )
-texture = ExtResource( 11 )
-script = ExtResource( 10 )
-
-[node name="TrashButton2" type="TextureButton" parent="WoodsButton"]
-margin_left = -1600.0
-margin_top = -2428.57
-margin_right = -800.0
-margin_bottom = -2056.57
-rect_pivot_offset = Vector2( -8157.14, -99.9983 )
-
-[node name="Trash1" type="Sprite" parent="WoodsButton/TrashButton2"]
-position = Vector2( 408.5, 318 )
-scale = Vector2( 1.02125, 1.0275 )
-texture = ExtResource( 11 )
-script = ExtResource( 10 )
-
-[node name="TrashButton1" type="TextureButton" parent="WoodsButton"]
-margin_left = 1714.29
-margin_top = -3971.43
-margin_right = 2514.29
-margin_bottom = -3599.43
-rect_pivot_offset = Vector2( -8157.14, -99.9983 )
-
-[node name="Trash1" type="Sprite" parent="WoodsButton/TrashButton1"]
-position = Vector2( 408.5, 318 )
-scale = Vector2( 1.02125, 1.0275 )
-texture = ExtResource( 11 )
-script = ExtResource( 10 )
-
-[node name="OilrigButton1" type="TextureButton" parent="WoodsButton"]
-margin_left = -514.285
-margin_top = -4557.14
-margin_right = -453.285
-margin_bottom = -4501.14
-
-[node name="Oilrig1" type="Sprite" parent="WoodsButton/OilrigButton1"]
-position = Vector2( 40, 67 )
-scale = Vector2( 1.66, 1.66 )
-texture = ExtResource( 12 )
-script = ExtResource( 14 )
-
+[connection signal="pressed" from="TrashButton3" to="TrashButton3/Trash1" method="_on_TrashButton1_pressed"]
+[connection signal="pressed" from="TrashButton2" to="TrashButton2/Trash1" method="_on_TrashButton1_pressed"]
+[connection signal="pressed" from="TrashButton1" to="TrashButton1/Trash1" method="_on_TrashButton1_pressed"]
+[connection signal="pressed" from="OilrigButton1" to="OilrigButton1/Oilrig1" method="_on_OilrigButton1_pressed"]
 [connection signal="pressed" from="VBoxContainer/main menu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="CoralButton" to="CoralButton/Coral1" method="_on_TextureButton_pressed"]
@@ -202,12 +199,7 @@ script = ExtResource( 14 )
 [connection signal="pressed" from="CoralButton" to="CoralButton/Coral3" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="CoralButton" to="CoralButton/Coral4" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree1" method="_on_WoodsButton_pressed"]
-[connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree2" method="_on_WoodsButton_pressed"]
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree3" method="_on_WoodsButton_pressed"]
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree4" method="_on_WoodsButton_pressed"]
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree5" method="_on_WoodsButton_pressed"]
 [connection signal="pressed" from="WoodsButton" to="WoodsButton/Tree6" method="_on_WoodsButton_pressed"]
-[connection signal="pressed" from="WoodsButton/TrashButton3" to="WoodsButton/TrashButton3/Trash1" method="_on_TrashButton1_pressed"]
-[connection signal="pressed" from="WoodsButton/TrashButton2" to="WoodsButton/TrashButton2/Trash1" method="_on_TrashButton1_pressed"]
-[connection signal="pressed" from="WoodsButton/TrashButton1" to="WoodsButton/TrashButton1/Trash1" method="_on_TrashButton1_pressed"]
-[connection signal="pressed" from="WoodsButton/OilrigButton1" to="WoodsButton/OilrigButton1/Oilrig1" method="_on_OilrigButton1_pressed"]
